@@ -11,10 +11,22 @@ body {
   padding: 0;
 }
 
+@media (max-width: 740px) {
+  ul li {
+    width: 100%;
+  }
+    .container ul li {
+        text-align: center;
+    }
+}
+
 @media (max-width: 500px) {
   ul li {
     width: 100%;
   }
+    ul{
+        text-align: center;
+    }
 }
 /* Header */
 
@@ -45,7 +57,6 @@ body {
 /* Jumbotron */
 
 .jumbotron {
-  background: url("https://s3.amazonaws.com/codecademy-content/projects/adoptly/bg.jpg") no-repeat center center;
   background-size: cover;
   height: 500px;
   text-align: center;
@@ -54,7 +65,7 @@ body {
 
 .jumbotron h1 {
   color: #e52364;
-  font-weight: 700;
+  font-weight: 600;
 }
 /* Supporting */
 
@@ -104,3 +115,57 @@ body {
 a {
     color:white
 }
+
+.form input{
+    width:50%;
+    display: block;
+    margin: 8px auto;
+    padding: 12px 20px;
+    text-align: center;
+    color:white;
+}
+
+.form button{
+    width:50%;
+    display: block;
+    margin: 8px auto;
+    padding: 12px 20px;
+    background-color: #fafcf8;
+    color: #e52364;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 3px solid #30627E; 
+}
+
+input[type="text"]{
+    background-color: #fafcf8; 
+    color:#30627E;
+    border-radius: 4px;
+    border:none;
+    box-sizing: border-box;
+    border-bottom: 3px solid #30627E;   
+}
+
+input::placeholder{
+    color:#30627E;
+}
+
+input[type="password"]{
+    background-color: #fafcf8;
+    color:#30627E;
+    border-radius: 4px;
+    border:none;
+    box-sizing: border-box;
+    border-bottom: 3px solid #30627E;
+}
+
+.headercontainer {
+    width:50%;
+    text-align: center;
+    margin: 8px auto;
+    padding: 6px 0px;
+}
+
+
+
