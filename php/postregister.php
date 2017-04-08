@@ -1,5 +1,5 @@
 <?php
-require_once './php/db_connect.php';
+//require_once './php/db_connect.php';
 ini_set('display_errors', '1');
 //error_reporting(0);
 ?>
