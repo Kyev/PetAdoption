@@ -142,7 +142,7 @@ body {
   border-radius: 50%;
   margin: auto;
   background: rgba(250, 214, 195, 1);
-  border: 0.375rem solid white;
+  border: 0.375rem solid #FFD480;
 }
 
 .profile-card_header img {
@@ -315,7 +315,7 @@ body {
     max-width: 26rem;
   }
 }*/
-
+/*
 .btn {
   font-size: 16px;
   border-radius: 0px;
