@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  max-width: 940px;
+  /*max-width: 940px;*/
   margin: 0 auto;
   padding: 0;
 }
@@ -93,14 +93,14 @@ body {
 }
 
 .sidebar_wrapper {
-  width: 100%;
+  width: 400%;
   max-width: 26rem;
 }
 
 .about-dev {
   width: 100%;
   max-width: 26rem;
-  margin: auto;
+  margin: 25px, 25px25px, 25px;
   box-shadow: 2px 4px 2px -2px rgba(0, 0, 0, .3), -2px -4px 15px -2px rgba(0, 0, 0, .2);
   animation: profile_in 0.8s;
 }
@@ -350,8 +350,7 @@ a {
 
 .input[type=text] {
     width: 100px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+   
 }
 
 /* When the input field gets focus, change its width to 100% */
@@ -359,6 +358,6 @@ input[type=text]:focus {
     width: 20%;
 }
 
-.col-mid-12 {
-    margin: 40px;
+.col-sm-5 {
+    margin: 25px, 25px;
 }
