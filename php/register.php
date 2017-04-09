@@ -42,18 +42,18 @@ input[type=checkbox].glyphicon{
   <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
   <div class="header">
     <div class="container">
       <ul>
-        <li class="main"><a href="#"><img src="img/Pets_R_Us_sml.png" alt="Logo"></a></li>
-        <li><a href="html/about.html">About</a></li>
-        <li><a hred="html/animals.html">Animals</a></li>
-        <li><a href="html/register.html">Register</a></li>
-          <li><a href="html/login.html">Login</a></li>
+        <li class="main"><a href="../index.html"><img src="../img/Pets_R_Us_sml.png" alt="Logo"></a></li>
+        <li><a href="../html/about.html">About</a></li>
+        <li><a href="../html/animals.html">Animals</a></li>
+        <li><a href="#">Register</a></li>
+          <li><a href="../html/login.html">Login</a></li>
       </ul>
     </div>
   </div>
