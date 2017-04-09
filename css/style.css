@@ -31,7 +31,7 @@ body {
 /* Header */
 
 .header {
-  background-color: #30627E;
+  background-color: #7098DA;
 }
 
 .header ul {
@@ -41,9 +41,14 @@ body {
   padding: 0;
 }
 
+img {
+    position: relative;
+    height: 100px;
+    width: 200px;
+}
+
 .header .main {
-  font-size: 28px;
-  background-color: #e52364;
+  background-color: #7098DA;
 }
 
 .header li {
@@ -57,6 +62,7 @@ body {
 /* Jumbotron */
 
 .jumbotron {
+  background-color: whitesmoke;
   background-size: cover;
   height: 500px;
   text-align: center;
@@ -64,7 +70,7 @@ body {
 }
 
 .jumbotron h1 {
-  color: #e52364;
+  color: #FFD480;
   font-weight: 600;
 }
 /* Supporting */
@@ -100,7 +106,7 @@ body {
 
 .footer {
   color: #fff;
-  background-color: #e52364;
+  background-color: #7098DA;
   padding: 20px;
 }
 

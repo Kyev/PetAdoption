@@ -49,7 +49,7 @@ input[type=checkbox].glyphicon{
   <div class="header">
     <div class="container">
       <ul>
-        <li class="main">Pets'R'Us</li>
+        <li class="main"><a href="#"><img src="img/Pets_R_Us_sml.png" alt="Logo"></a></li>
         <li><a href="html/about.html">About</a></li>
         <li><a hred="html/animals.html">Animals</a></li>
         <li><a href="html/register.html">Register</a></li>
