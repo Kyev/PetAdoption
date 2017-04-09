@@ -29,6 +29,12 @@ body {
   padding: 0;
 }
 
+img {
+    position: relative;
+    height: 100px;
+    width: 200px;
+}
+
 .header .main {
   font-size: 28px;
   /*background-color: #90F2FF;*/
@@ -208,7 +214,7 @@ body {
   background: #c6f1eb;
   left: -5px;
   top: 0%;/*50% before change to 0%highlight*/
-  z-index: -1;
+  /*z-index: -1;
 }*/
 
 .profile-card_about p {
