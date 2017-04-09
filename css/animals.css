@@ -25,29 +25,28 @@ body {
 .header ul {
   list-style: none;
   text-align: left;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
 }
 
 #logo {
     position: relative;
-    height: 30px;
+    height: 60px;
     width: 200px;
 }
 
-.header .main {
-  font-size: 28px;
-  /*background-color: #90F2FF;*/
+.header .main { /* LOGO properties */
+    margin-bottom: 0px;
 }
 
 .header li {
   color: #fff;
   display: inline-block;
-  font-size: 20px;
+  font-size: 30px;
   text-align: left;
-  padding: 20px 30px;
-  margin: 0;
+    
+  padding: 20px;
 }
+
 /* Jumbotron */
 
 .jumbotron {
@@ -101,6 +100,7 @@ body {
 .sidebar_wrapper {
   width: 400%;
   max-width: 26rem;
+    
 }
 
 .about-dev {
@@ -190,6 +190,7 @@ body {
   padding: 1.5em 2rem;
   color: #222;
   font-family: 'Lao', sans-serif;
+  border-radius: 0px 0px 8px 8px;
 }
 
 .profile-card_about h2 {
@@ -292,6 +293,7 @@ body {
   .side_wrapper {
     min-height: 100vh;
     background: #ededed;
+      
   }
   .about-dev {
     box-shadow: none;
@@ -301,9 +303,12 @@ body {
 @media screen and (min-width: 33em) {
   .side_wrapper {
     margin: 2rem auto;
+    
   }
   .profile-card_header {
     padding: 1.5em 4em 1em;
+    border-radius: 8px 8px 0px 0px; 
+      
   }
 }
 
@@ -362,8 +367,4 @@ a {
 /* When the input field gets focus, change its width to 100% */
 input[type=text]:focus {
     width: 20%;
-}
-
-.col-sm-5 {
-    margin: 25px, 25px;
 }
