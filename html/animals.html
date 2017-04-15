@@ -8,6 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../css/animals.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -59,13 +60,13 @@
             <div class="profile-card_header-imgbox">
               <img src="../img/Bear.jpg" alt="Mewy Pawpins" />
             </div>
-              <h1>Champ<span>Retriever Mix</span></h1>
+              <h1>Champ<span>labrador mix</span></h1>
           </div>
         </header>
         <div class="profile-card_about">
           <h2>HIGH ENERGY</h2>
           <p>I love going on long walks and exercising daily. I always have energy to play with my owner. </p>
-          <input type="button" class="btn btn-success center-block" value="Reserve">
+          <input type="button" class="btn btn-success center-block" value="Reserve" onclick="myFunction()">
         </div>
       </div>
     </div>
@@ -211,6 +212,11 @@
     </div>
   </div>
 </div>
+<script>
+function myFunction() {
+    alert("Champ has been reserved =)");
+}
+</script>
 </body>
 
 </html>
