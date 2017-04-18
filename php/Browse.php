@@ -13,7 +13,7 @@ class Pet {
     
     //Create an animal Object
     var $Animal = new Animal();
-    
+
     //Methods
     function add(){
         
