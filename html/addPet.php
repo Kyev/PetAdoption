@@ -31,7 +31,7 @@
         <h3>New Pet</h3>
         <div class="col-sm-4">
             <div class="side_wrapper">
-                <form action="../php/addPet.php" method="post" name="contactform">
+                <form action="addPet.php" method="post" name="contactform">
                     <p>Pet ID *</p>
                     <p><input maxlength="50" name="pet_id" size="30" type="text" /></p>
                     <p>Pet Name *</p>
@@ -44,12 +44,6 @@
                     <p><input maxlength="80" name="pet_sex" size="30" type="text" /></p>
                     <p>Pet Weight *</p>
                     <p><input maxlength="30" name="pet_weight" size="30" type="text" /></p>
-                    <p>Please Upload a Photo of the Pet in gif or jpeg format. The file name should be named after the Pets name. If the same file name is uploaded twice it will be overwritten! Maximum size of File is 35kb.</p>
-                    <p>Photo:</p>
-                    <p>
-                        <input type="hidden" name="size" value="350000">
-                        <input type="file" name="photo">
-                    </p>
                     <p>Pet Description *</p>
                     <p><textarea cols="25" maxlength="1000" name="pet_description" rows="6"></textarea></p>
                     <p><input type="submit" value="Submit" /></p>
@@ -59,12 +53,32 @@
     </div>
 </div>
 
+<?php
+//This gets all the other information from the form
+$id=$_POST['pet_id'];
+$name=$_POST['pet_name'];
+$type=$_POST['pet_type'];
+$breed=$_POST['pet_breed'];
+$sex=$_POST['pet_sex'];
+$weight=$_POST['pet_weight'];
+$description=$_POST['pet_description'];
+
+// Connects to your Database
+require_once '../php/db_connect.php';
+
+//Writes the information to the database
+$sql = "INSERT INTO PETS (id, name, breed, type, sex, weight_in_lbs, description) VALUES ('$id', '$name', '$breed', '$type', '$sex', '$weight', '$description') ";
+$result=$db->query($sql);
 
 
+if($result->num_rows > 0) {
+echo '        <div class="alert alert-success">Pet Added Successfully.</div>' . PHP_EOL;
+} else {
+echo '        <div class="alert alert-danger">Error: (' . $db->errno . ') ' . $db->error . '</div>' . PHP_EOL;
+exit(); // Prevents the rest of the file from running
+}
 
-
-
-
+?>
 
 <div class="supporting">
     <div class="container">
@@ -106,3 +120,4 @@
 </body>
 
 </html>
+
