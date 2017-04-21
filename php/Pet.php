@@ -19,18 +19,18 @@ class Pet {
         
     }
     
-    function remove(){
+    function remove($petID){
             $_SESSION['admin'] = TRUE; // Remove this later
         
             // Handles the deletion process when user
             // clicks the delete button on an image
             // Will only delete the image if 
             // if user has admin privileges 
-            if(isset($_POST['submitDelete']))
+            if(isset($petID)
             {
                 
                 
-                $idToDelete = $_POST['submitDelete'];
+                $idToDelete = $petID;
                 //echo " ID to delete is $idToDelete";
                 $imageFind  = "SELECT * FROM PETS WHERE petID = $idToDelete";
                 $imageInfo = $db->query($imageFind);
@@ -45,7 +45,7 @@ class Pet {
                 if ($_SESSION['admin'] == TRUE)
                 {
                     $delete = "DELETE FROM PETS WHERE 
-                              petID = $idToDelete";
+                    petID = $idToDelete";
                     if(!$imageremoval = $db->query($delete))
                     {
                         die('There was an error running the query');
