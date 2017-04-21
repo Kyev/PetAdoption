@@ -20,7 +20,58 @@ class Pet {
     }
     
     function remove(){
+            $_SESSION['admin'] = TRUE; // Remove this later
         
+            // Handles the deletion process when user
+            // clicks the delete button on an image
+            // Will only delete the image if 
+            // if user has admin privileges 
+            if(isset($_POST['submitDelete']))
+            {
+                
+                
+                $idToDelete = $_POST['submitDelete'];
+                //echo " ID to delete is $idToDelete";
+                $imageFind  = "SELECT * FROM PETS WHERE petID = $idToDelete";
+                $imageInfo = $db->query($imageFind);
+                
+
+                if(!$image = $db->query($imageFind))
+                {
+                    die('There was an error running the query');
+                }
+
+
+                if ($_SESSION['admin'] == TRUE)
+                {
+                    $delete = "DELETE FROM PETS WHERE 
+                              petID = $idToDelete";
+                    if(!$imageremoval = $db->query($delete))
+                    {
+                        die('There was an error running the query');
+                    }
+                    $imageremoval = $db->query($imageFind);
+                    echo
+                    "
+                        <script>
+                            function myFunction() {
+                            alert('Pet was succesfully deleted!');
+                            }
+                        </script>
+                    ";    
+                }
+                else
+                {
+                    echo 
+                    "
+                        <script>
+                            function myFunction() {
+                            alert('Error deleting pet!');
+                            }
+                        </script>
+                    ";    
+                }  
+            }
     }
     
     function getPet(){
