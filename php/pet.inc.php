@@ -28,7 +28,7 @@ include 'dbh.inc.php';
                                   <div class="profile-card_header-container">
                                     <div class="profile-card_header-imgbox">'; //end of opening container
                     //Get Image
-                    echo '<img src="../img/'.$datas['pIMG'].'" alt="'.$datas['pIMG'].'" />';
+                    echo '<img src="../img/'.$datas['pImg'].'" alt="'.$datas['pImg'].'" />';
                 echo '</div>
             <h1>'.$datas['pName'].'<span>'.$datas['pBreed'].'</span></h1>
           </div>
