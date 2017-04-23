@@ -32,6 +32,59 @@
             $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '$this->pStatus', '$this->pDescription')";
             $this->connect()->query($sql);
         }
+        
+        function deletePet($petID){
+            $_SESSION['admin'] = TRUE; // Remove this later
+        
+            // Handles the deletion process when user
+            // clicks the delete button on an pet
+            // Will only delete the pet if 
+            // if user has admin privileges 
+            if(isset($petID))
+            {
+                
+                
+                $idToDelete = $petID;
+                //echo " ID to delete is $idToDelete";
+                $pet  = "SELECT * FROM PETS WHERE petID = $idToDelete";
+                $petInfo = $db->query($petFind);
+                
+                if(!$pet = $db->query($petFind))
+                {
+                    die('There was an error running the query');
+                }
+                
+                if ($_SESSION['admin'] == TRUE)
+                {
+                    $delete = "DELETE FROM PETS WHERE 
+                    petID = $idToDelete";
+                    if(!$petremoval = $db->query($delete))
+                    {
+                        die('There was an error running the query');
+                    }
+                    $petremoval = $db->query($petFind);
+                    echo
+                    "
+                        <script>
+                            function myFunction() {
+                            alert('Pet was succesfully deleted!');
+                            }
+                        </script>
+                    ";    
+                }
+                else
+                {
+                    echo 
+                    "
+                        <script>
+                            function myFunction() {
+                            alert('Error deleting pet!');
+                            }
+                        </script>
+                    ";    
+                }  
+            }
+        }
     }
 
 
