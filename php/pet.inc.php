@@ -8,15 +8,21 @@
         private $pStatus;
         private $pDescription;
          
-        protected function getPets () {
-            $sql = "SELECT * FROM Pets";
+        public function getPets($type){
+            $sql = "SELECT * FROM PETS WHERE pType ='$type'";
             $result = $this->connect()->query($sql);
             $numRows = $result->num_rows;
             if($numRows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $data[] = $row;
                 }
-                return $data;
+                foreach ($data as $datas) {
+                echo $datas['pName'];
+                echo $datas['pType'];
+                echo $datas['pSex'];
+                echo $datas['petSize'];
+                }
+                //return $data;
             }
         }
         
@@ -29,61 +35,8 @@
             $this->pStatus = $status;
             $this->pDescription = $description;
             
-            $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '$this->pStatus', '$this->pDescription')";
+            $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '0', '$this->pDescription')";
             $this->connect()->query($sql);
-        }
-        
-        function deletePet($petID){
-            $_SESSION['admin'] = TRUE; // Remove this later
-        
-            // Handles the deletion process when user
-            // clicks the delete button on an pet
-            // Will only delete the pet if 
-            // if user has admin privileges 
-            if(isset($petID))
-            {
-                
-                
-                $idToDelete = $petID;
-                //echo " ID to delete is $idToDelete";
-                $pet  = "SELECT * FROM PETS WHERE petID = $idToDelete";
-                $petInfo = $db->query($petFind);
-                
-                if(!$pet = $db->query($petFind))
-                {
-                    die('There was an error running the query');
-                }
-                
-                if ($_SESSION['admin'] == TRUE)
-                {
-                    $delete = "DELETE FROM PETS WHERE 
-                    petID = $idToDelete";
-                    if(!$petremoval = $db->query($delete))
-                    {
-                        die('There was an error running the query');
-                    }
-                    $petremoval = $db->query($petFind);
-                    echo
-                    "
-                        <script>
-                            function myFunction() {
-                            alert('Pet was succesfully deleted!');
-                            }
-                        </script>
-                    ";    
-                }
-                else
-                {
-                    echo 
-                    "
-                        <script>
-                            function myFunction() {
-                            alert('Error deleting pet!');
-                            }
-                        </script>
-                    ";    
-                }  
-            }
         }
     }
 
