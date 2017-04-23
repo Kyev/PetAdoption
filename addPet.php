@@ -2,6 +2,7 @@
 //    include 'php/dbh.inc.php';
     include 'php/pet.inc.php';
 //    include 'addpets.php';
+    error_reporting(E_ERROR | E_PARSE);
 ?>
 
 <!DOCTYPE html>
