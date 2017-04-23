@@ -2,221 +2,86 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Pets'R'Us</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../css/animals.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Pets'R'Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/animals.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 
 <body>
 <div class="header">
-  <div class="container">
-    <ul>
-      <li class="main">
-        <a href="#"><img src="../img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
-      </li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="animals.html">Animals</a></li>
-      <li><a href="../php/register.php">Register</a></li>
-      <li><a href="login.html">Login</a></li>
-    </ul>
-  </div>
+    <div class="container">
+        <ul>
+            <li class="main">
+                <a href="#"><img src="../img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="../php/register.php">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
 </div>
 <!--
 < <div class="jumbotron">-->
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="side_wrapper">
-
-        <header class="profile-card_header">
-          <div class="profile-card_header-container">
-            <div class="profile-card_header-imgbox">
-              <img src="../img/malt.jpg" alt="Mewy Pawpins" />
-            </div>
-            <h1>Fluffy<span>Maltese</span></h1>
-          </div>
-        </header>
-        <div class="profile-card_about">
-          <h2>LOW MAINTENANCE</h2>
-          <p>I love relaxing on the couch and being lazy while spending time with my owner.</p>
-          <input type="button" class="btn btn-default center-block" value="Reserve">
-          <!-- <div class="container">
-<!--  <h1>Meet your new best friend.</h1>-->
-        </div>
-
-      </div>
-    </div>
-
-
-    <div class="col-sm-4">
-      <div class="side_wrapper">
-
-        <header class="profile-card_header">
-          <div class="profile-card_header-container">
-            <div class="profile-card_header-imgbox">
-              <img src="../img/Bear.jpg" alt="Mewy Pawpins" />
-            </div>
-              <h1>Champ<span>labrador mix</span></h1>
-          </div>
-        </header>
-        <div class="profile-card_about">
-          <h2>HIGH ENERGY</h2>
-          <p>I love going on long walks and exercising daily. I always have energy to play with my owner. </p>
-          <input type="button" class="btn btn-success center-block" value="Reserve" onclick="myFunction()">
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="side_wrapper">
-
-        <header class="profile-card_header">
-          <div class="profile-card_header-container">
-            <div class="profile-card_header-imgbox">
-              <img src="../img/spnx.jpg" alt="Mewy Pawpins" />
-            </div>
-            <h1>Smokey<span>Sphynx</span></h1>
-          </div>
-        </header>
-        <div class="profile-card_about">
-          <h2>INDEPENDENT</h2>
-          <p>I'm independent at times, but do also enjoy spending time with my owner.  </p>
-          <input type="button" class="btn btn-warning center-block" value="Reserve">
-          <!-- <div class="container">
-<!--  <h1>Meet your new best friend.</h1>-->
-        </div>
-
-      </div>
-    </div>
-
-
-  </div>
-</div>
-
-
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="side_wrapper">
-        <section class="about-dev">
-          <header class="profile-card_header">
-            <div class="profile-card_header-container">
-              <div class="profile-card_header-imgbox">
-                <img src="../img//cats/Fluffy.jpg" alt="Mewy Pawpins" />
-              </div>
-              <h1>Waffles<span>Savannah</span></h1>
-            </div>
-          </header>
-          <div class="profile-card_about">
-            <h2>EXTREMELY LOVABLE</h2>
-            <p>I have a big bark and and even bigger heart. My kindness is relative so do what I say</p>
-            <input type="button" class="btn btn-danger center-block" value="Reserve">
-            <!-- <div class="container">
-<!--  <h1>Meet your new best friend.</h1>-->
-          </div>
-        </section>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="side_wrapper">
-        <section class="about-dev">
-          <header class="profile-card_header">
-            <div class="profile-card_header-container">
-              <div class="profile-card_header-imgbox">
-                <img src="../img/cock.jpg" alt="Mewy Pawpins" />
-              </div>
-              <h1>Mewy<span>Golden Retriever</span></h1>
-            </div>
-          </header>
-          <div class="profile-card_about">
-            <h2>QUICK LEARNER</h2>
-            <p>I like to read newspapers and eat them. Knowledge is Power!</p>
-            <input type="button" class="btn btn-primary center-block" value="Reserve">
-            <!-- <div class="container">
-<!--  <h1>Meet your new best friend.</h1>-->
-          </div>
-        </section>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="side_wrapper">
-        <section class="about-dev">
-          <header class="profile-card_header">
-            <div class="profile-card_header-container">
-              <div class="profile-card_header-imgbox">
-                <img src="../img/dogs/thor.jpg" alt="Mewy Pawpins" />
-              </div>
-              <h1>Thor<span>Russel Terrier</span></h1>
-            </div>
-          </header>
-          <div class="profile-card_about">
-            <h2>LOVES FETCH</h2>
-            <p>I love to chase frisbees because UFOS.</p>
-            <input type="button" class="btn btn-info center-block" value="Reserve">
-            <!-- <div class="container">
-<!--  <h1>Meet your new best friend.</h1>-->
-          </div>
-        </section>
-      </div>
-    </div>
-
-
-  </div>
-</div>
-
-
-
-
-
-<div class="supporting">
-  <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <!--  <h2>Search</h2>
-<p>Find a pet based on location, type, breed, age, and gender. We look through hundreds of shelters, agencies, and rescue sites.</p>
-<a href="#" class="btn">Go</a>-->
-      </div>
-      <div class="col-md-4">
-        <!-- <h2>Learn</h2>
-<p>Read articles on feeding, training, grooming, and more. Our resources ensure that you are fully prepared as a new pet owner.</p>
-<a href="#" class="btn">Go</a>-->
-      </div>
-      <div class="col-md-4">
-        <!--   <h2>Help</h2>
-<p>Get involved to help pets in need. You can make a difference through volunteering, social media, and donations.</p>
-<a href="#" class="btn">Go</a>-->
-      </div>
+        <div class="col-sm-4">
+            <div class="side_wrapper">
+            </div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <div class="side_wrapper">
+                <header class="profile-card_header">
+                    <img src="../img/cat.png" alt="Cats" />
+                </header>
+                <div class="profile-card_about">
+                    <input type="button" class="btn btn-success center-block" value="VIEW CATS">
+                </div>
+            </div>
+            <div class="side_wrapper">
+                <header class="profile-card_header">
+                    <img src="../img/dog.png" alt="Dogs" />
+                </header>
+                <div class="profile-card_about">
+                    <input type="button" class="btn btn-success center-block" value="VIEW DOGS">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="side_wrapper">
+
+            </div>
+        </div>
+
+
     </div>
-  </div>
 </div>
+
+
+
 
 <div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <div class="copy">© Pets'R'Us</div>
-      </div>
-      <div class="col-md-10">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="copy">© Pets'R'Us</div>
+            </div>
+            <div class="col-md-10">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-<script>
-function myFunction() {
-    alert("Champ has been reserved =)");
-}
-</script>
 </body>
 
 </html>
