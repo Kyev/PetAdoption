@@ -79,23 +79,13 @@ input[type=checkbox].glyphicon{
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
-                        <form id="signupform" method = "post" action = "postregister.php" class="form-horizontal" role="form">
+                        <form id="signupform" method = "post" action = "register.php" class="form-horizontal" role="form">
                                     
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-font"></i></span>
-                                        <input id="signup-firstname" type="text" class="form-control" name="fName" value="" placeholder="First Name">                                        
+                                        <input id="signup-username" type="text" class="form-control" name="userName" value="Username" placeholder="User Name">
                                     </div>
-                                
-                            <div style="margin-bottom: 25px" class="input-group">
-                                         <span class="input-group-addon"><i class="glyphicon glyphicon-bold"></i></span>
-                                        <input id="signup-lastname" type="text" class="form-control" name="lName" placeholder="Last Name" value="">
-                                    </div>
-                            
-                            <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="signup-username" type="text" class="form-control" name="username" value="" placeholder="Username">                                        
-                                    </div>
-                            
+
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                         <input id="signup-password" type="password" class="form-control" name="password" placeholder="Password">
@@ -103,83 +93,14 @@ input[type=checkbox].glyphicon{
 
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input id="signup-passwordconfirm" type="password" class="form-control" name="cpw" placeholder="Confirm Password">
+                                        <input id="signup-passwordconfirm" type="text" class="form-control" name="address" placeholder="Address">
                             </div>
-                            
-                            <div style="margin-bottom: 25px" class="input-group">
-                                        
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                                        <input type='text' class="form-control" placeholder="Date of Birth" id="dob">
-                                    <script type="text/javascript">
-                                        $(function () {
-                                        $('input[name="daterange"]').daterangepicker();
-                                        });
-                                    </script>
-                            </div>
-                            
- 
-                            <div style="margin-bottom: 25px" class="input-group">
-                                
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-glass"></i>Do you drink butter?</span>
 
-                                        <select id="info_type" class="form-control">
-                                            <option> </option>
-                                            <option>Yes</option>
-                                            <option>No</option>
-                                            <option>What?</option>
-                                        </select>
-                                    
-                            </div>       
-                            
-                            
                             <div style="margin-bottom: 25px" class="input-group">
-                                
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i>Do you drink butter?</span>
+                                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                                    <input id="signup-password" type="text" class="form-control" name="email" placeholder="Email">
+                                                                </div>
 
-                                        <select id="info_type" class="form-control">
-                                            <option> </option>
-                                            <option>Yes</option>
-                                            <option>No</option>
-                                            <option>What?</option>
-                                        </select>
-                                    
-                            </div>   
-                            
-                            <div style="margin-bottom: 25px" class="input-group">
-                                
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-question-sign"></i>Do you drink butter?</span>
-
-                                        <select id="info_type" class="form-control">
-                                            <option> </option>
-                                            <option>Yes</option>
-                                            <option>No</option>
-                                            <option>What?</option>
-                                        </select>
-                                    
-                            </div>   
-                            
-                            
-                            <div style="margin-bottom: 25px" class="input-group">
-                                
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i>Do you drink butter?</span>
-
-                                        <select id="info_type" class="form-control">
-                                            <option> </option>
-                                            <option>Yes</option>
-                                            <option>No</option>
-                                            <option>What?</option>
-                                        </select>
-                                    
-                            </div> 
-                            
-                            <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                        <input id="signup-username" type="text" class="form-control" name="phone" value="" placeholder="Phone Number">                                        
-                                    </div>                            
-                            
-                            
-                            
-                                                       
                             
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
@@ -200,7 +121,16 @@ input[type=checkbox].glyphicon{
                                         </div>
                                     </div>
                                 </div>    
-                            </form>    
+                            </form>
+
+                                <?php
+
+                                $addUser = new Customer();
+                                $addUser->registerCustomer($userName, $address, $password, $email);
+
+
+
+                                ?>
 
                         </div>                     
                     </div>  
