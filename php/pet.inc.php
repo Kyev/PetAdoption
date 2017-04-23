@@ -1,5 +1,6 @@
 <?php
 include 'dbh.inc.php';
+
     class Pet extends Dbh{
         private $pName;
         private $pType;
@@ -45,8 +46,12 @@ include 'dbh.inc.php';
         </header>
         <div class="profile-card_about">
           <h2>'.$datas['pSex'].'</h2>
-          <p>'.$datas['pDescription'].'</p>
-          <input type="button" class="btn btn-default center-block" value="Reserve">';    
+          <p>'.$datas['pDescription'].'</p>';
+                if($datas['pStatus'] > 0){
+                echo '<input type="button" class="btn btn-default center-block" value="Reserve" style="background-color: #4caf50">';
+                } else{
+                    echo '<input type="button" class="btn btn-default center-block" value="RESERVED" style="background-color: #f44336">';
+                }
          //closing brackets           
         echo '</div></div></div>';
                     

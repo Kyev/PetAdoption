@@ -7,6 +7,10 @@ if(isset($_POST['animalSubmit'])){
 else {
     echo '<meta http-equiv="refresh" content="0; URL="animals.php"';
 }
+
+if(isset($_POST['animalReserve'])){
+    
+}
 ?>
 <!DOCTYPE html>
 <html>
