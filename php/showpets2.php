@@ -4,6 +4,9 @@ session_start();
 if(isset($_POST['animalSubmit'])){
     $_SESSION['animal'] = $_POST['animalSubmit'];
 }
+else {
+    echo '<meta http-equiv="refresh" content="0; URL="animals.php"';
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,9 +38,7 @@ if(isset($_POST['animalSubmit'])){
 
 <?php
     $petSearch = new Pet();
-    echo 'start';
     if(isset($_SESSION['animal'])) $petSearch->getPets($_SESSION['animal']);
-    echo 'end';
 ?>
     
     
