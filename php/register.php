@@ -124,6 +124,11 @@ input[type=checkbox].glyphicon{
                             </form>
 
                                 <?php
+                                $userName = $_POST['userName'];
+                                $address = $_POST['address'];
+                                $password = $_POST['password'];
+                                $email = $_POST['email'];
+
 
                                 $addUser = new Customer();
                                 $addUser->registerCustomer($userName, $address, $password, $email);
