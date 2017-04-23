@@ -31,9 +31,7 @@ include 'pet.inc.php';
 
 <?php
     $petSearch = new Pet();
-    $petSearch->getPets("Cat");
-    $petSearch->getPets("Dog");
-
+    $petSearch->getAllPets();
 ?>
 
 
