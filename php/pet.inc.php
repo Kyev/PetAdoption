@@ -1,5 +1,5 @@
 <?php
-
+include 'dbh.inc.php';
     class Pet extends Dbh{
         private $pName;
         private $pType;
@@ -9,7 +9,7 @@
         private $pStatus;
         private $pDescription;
          
-        protected function getPets () {
+        /*function getPets () {
             $sql = "SELECT * FROM Pets";
             $result = $this->connect()->query($sql);
             $numRows = $result->num_rows;
@@ -18,6 +18,46 @@
                     $data[] = $row;
                 }
                 return $data;
+            }
+        }*/
+        public function getPets($type){
+            $sql = "SELECT * FROM PETS WHERE pType ='$type'";
+            $result = $this->connect()->query($sql);
+            $numRows = $result->num_rows;
+            if($numRows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $data[] = $row;
+                }
+                echo '<div class="container"><div class="row">';
+                foreach ($data as $datas) {
+                    //opening container
+                    echo '<div class="col-sm-4">
+                              <div class="side_wrapper">
+                                <header class="profile-card_header">
+                                  <div class="profile-card_header-container">
+                                    <div class="profile-card_header-imgbox">'; //end of opening container
+                    echo '<img src="../img/malt.jpg" alt="Mewy Pawpins" />';
+                    
+                    
+                echo '</div>
+            <h1>'.$datas['pName'].'<span>'.$datas['pBreed'].'</span></h1>
+          </div>
+        </header>
+        <div class="profile-card_about">
+          <h2>'.$datas['pSex'].'</h2>
+          <p>'.$datas['pDescription'].'</p>
+          <input type="button" class="btn btn-default center-block" value="Reserve">';    
+         //closing brackets           
+        echo '</div></div></div>';
+                    
+                /*echo $datas['pName'];
+                echo $datas['pType'];
+                echo $datas['pSex'];
+                echo $datas['pSize'];
+                echo $datas['pBreed'];*/
+                }
+                echo '</div></div>';
+                //return $data;
             }
         }
         
@@ -78,6 +118,4 @@
 }
 
 ?>
-/*INSERT INTO `PETS` (`pid`, `pName`, `pBreed`, `pType`, `pSex`, `pStatus`, `pDescription`, `pSize`) VALUES (NULL, 'Luke', 'Kylo', 'Dog', 'Male', 'Available', 'Random fits of rage.', 'Small');*/
-//clientregister in create account sequence diagram
-//reservepet in reservation 'createpetreservation' too in reservation sequence diagram
+

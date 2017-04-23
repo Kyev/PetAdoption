@@ -1,5 +1,9 @@
 <?php
+include 'pet.inc.php';
 session_start();
+if(isset($_POST['animalSubmit'])){
+    $_SESSION['animal'] = $_POST['animalSubmit'];
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,8 +34,10 @@ session_start();
 </div>
 
 <?php
-    if(isset($_SESSION['animal'])) echo $_SESSION['animal'];
-    //echo 'cat';
+    $petSearch = new Pet();
+    echo 'start';
+    if(isset($_SESSION['animal'])) $petSearch->getPets($_SESSION['animal']);
+    echo 'end';
 ?>
     
     

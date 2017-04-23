@@ -42,7 +42,7 @@
 
 <?php
         session_start();
-        $_SESSION['animal']="Cat";
+        $_SESSION['animal']="";
 ?>
         
         
@@ -56,8 +56,8 @@
 <img src="../img/cat.png" alt="Cats" />
 </header>
 <div class="profile-card_about">
-<form action="../php/showpets2.php">
-<input type="submit" class="btn btn-success center-block" value="VIEW CATS">
+<form action="../php/showpets2.php" method="POST">
+<button type="submit" class="btn btn-success center-block" value="Cat" name="animalSubmit">VIEW CATS</button>
 </form>
 </div>
 </div>
@@ -66,14 +66,29 @@ END;
         <!-- END CAT SECTION -->
             
         <!-- DOG SECTION -->
-            <div class="side_wrapper">
+            <?php
+            
+            echo <<<END
+<div class="side_wrapper">
+<header class="profile-card_header">
+<img src="../img/dog.png" alt="Dogs" />
+</header>
+<div class="profile-card_about">
+<form action="../php/showpets2.php" method="POST">
+<button type="submit" class="btn btn-success center-block" value="Dog" name="animalSubmit">VIEW DOGS</button>
+</form>
+</div>
+</div>
+END;
+        ?>
+            <!--<div class="side_wrapper">
                 <header class="profile-card_header">
                     <img src="../img/dog.png" alt="Dogs" />
                 </header>
                 <div class="profile-card_about">
                     <input type="button" class="btn btn-success center-block" value="VIEW DOGS">
                 </div>
-            </div>
+            </div>-->
         <!-- END DOG SECTION -->
             
         </div>
