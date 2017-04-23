@@ -9,18 +9,8 @@ include 'dbh.inc.php';
         private $pSize;
         private $pStatus;
         private $pDescription;
+        private $pImg;
          
-        /*function getPets () {
-            $sql = "SELECT * FROM Pets";
-            $result = $this->connect()->query($sql);
-            $numRows = $result->num_rows;
-            if($numRows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $data[] = $row;
-                }
-                return $data;
-            }
-        }*/
         public function getPets($type){
             $sql = "SELECT * FROM PETS WHERE pType ='$type'";
             $result = $this->connect()->query($sql);
@@ -37,9 +27,8 @@ include 'dbh.inc.php';
                                 <header class="profile-card_header">
                                   <div class="profile-card_header-container">
                                     <div class="profile-card_header-imgbox">'; //end of opening container
-                    echo '<img src="../img/malt.jpg" alt="Mewy Pawpins" />';
-                    
-                    
+                    //Get Image
+                    echo '<img src="../img/'.$datas['pIMG'].'" alt="'.$datas['pIMG'].'" />';
                 echo '</div>
             <h1>'.$datas['pName'].'<span>'.$datas['pBreed'].'</span></h1>
           </div>
@@ -54,19 +43,12 @@ include 'dbh.inc.php';
                 }
          //closing brackets           
         echo '</div></div></div>';
-                    
-                /*echo $datas['pName'];
-                echo $datas['pType'];
-                echo $datas['pSex'];
-                echo $datas['pSize'];
-                echo $datas['pBreed'];*/
                 }
                 echo '</div></div>';
-                //return $data;
             }
         }
         
-        public function addPet($name, $breed, $type, $sex, $size, $status, $description){
+        public function addPet($name, $breed, $type, $sex, $size, $status, $description, $pImg){
             $this->pName = $name;
             $this->pBreed = $breed;
             $this->pType = $type;
@@ -74,8 +56,9 @@ include 'dbh.inc.php';
             $this->pSize = $size;
             $this->pStatus = $status;
             $this->pDescription = $description;
+            $this->pImg = $image;
             
-            $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '$this->pStatus', '$this->pDescription')";
+            $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription, pImg) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '$this->pStatus', '$this->pDescription', '$this->pImg')";
             $this->connect()->query($sql);
         }
         
@@ -95,9 +78,8 @@ include 'dbh.inc.php';
                                 <header class="profile-card_header">
                                   <div class="profile-card_header-container">
                                     <div class="profile-card_header-imgbox">'; //end of opening container
-                    echo '<img src="../img/malt.jpg" alt="Mewy Pawpins" />';
-                    
-                    
+                    //Get Image
+                    echo '<img src="../img/'.$datas['pIMG'].'" alt="'.$datas['pIMG'].'" />';
                 echo '</div>
             <h1>'.$datas['pName'].'<span>'.$datas['pBreed'].'</span></h1>
           </div>
