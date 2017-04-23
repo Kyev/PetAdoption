@@ -1,27 +1,110 @@
 <?php
-
-//This gets all the other information from the form
-$id=$_POST['pet_id'];
-$name=$_POST['pet_name'];
-$type=$_POST['pet_type'];
-$breed=$_POST['pet_breed'];
-$sex=$_POST['pet_sex'];
-$weight=$_POST['pet_weight'];
-$description=$_POST['pet_description'];
-
-// Connects to your Database
-require_once 'db_connect.php';
-
-//Writes the information to the database
-$sql = "INSERT INTO PETS (id, name, breed, type, sex, weight_in_lbs, description) VALUES ('$id', '$name', '$breed', '$type', '$sex', '$weight', '$description') ";
-$result=$db->query($sql);
-
-
-if($result->num_rows > 0) {
-    echo '        <div class="alert alert-success">Pet Added Successfully.</div>' . PHP_EOL;
-    } else {
-    echo '        <div class="alert alert-danger">Error: (' . $db->errno . ') ' . $db->error . '</div>' . PHP_EOL;
-    exit(); // Prevents the rest of the file from running
-    }
-
+//    include 'php/dbh.inc.php';
+    include 'php/pet.inc.php';
+//    include 'addpets.php';
+    error_reporting(E_ERROR | E_PARSE);
 ?>
+
+<!DOCTYPE html>
+<html lang='en-US'>
+<header>
+    <meta charset='UTF-8'>
+    <title>Pet</title>
+</header>
+<body>
+
+
+    <h1>Add Pet</h1>
+    <div>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Pet name">
+
+            <select name="type">
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+            </select>
+            <select name="breed">
+                <option>Breed</option>
+                <option value="Pitbull">Pitbull</option>
+                <option value="Cavapoo">Cavapoo</option>
+            </select>
+            <select name="sex">
+                <option value="Male">Male</option>
+                <option value="Female ">Female</option>
+            </select>
+            <select name="size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            <select name="status">
+                <option value="Available">Available</option>
+                <option value="Reserved">Reserved</option>
+            </select>
+
+            <input type="text" name="description" placeholder="Pet descprition">
+
+            <button type="submit" name="submit" value="submit">Submit</button>
+        </form>
+    </div>
+
+    <!--<h1>Search Pet</h1>
+    <div>
+        <form method="POST">
+            <select name="type">
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+            </select>
+            <!--<select name="breed">
+                <option>Breed</option>
+                <option value="Pitbull">Pitbull</option>
+                <option value="Cavapoo">Cavapoo</option>
+            </select>
+            <select name="sex">
+                <option value="Male">Male</option>
+                <option value="Female ">Female</option>
+            </select>
+            <select name="size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>-->
+            <button type="submit" name="search">Search</button>
+        </form>
+    </div>-->
+
+    <?php
+
+        $name = $_POST['name'];
+        $type = $_POST['type'];
+        $breed = $_POST['breed'];
+        $sex = $_POST['sex'];
+        $description = $_POST['description'];
+        $size = $_POST['size'];
+
+        $add = new Pet();
+        $add->addPet($name, $breed, $type, $sex, $size,$description);
+
+        /*$type = $_POST['type'];
+
+        $search = new Pet();
+        $search->getPets($type);*/
+
+    ?>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--INSERT INTO `PETS` (`pid`, `pName`, `pBreed`, `pType`, `pSex`, `pStatus`, `pDescription`, `pSize`) VALUES (NULL, 'Luke', 'Kylo', 'Dog', 'Male', 'Available', 'Random fits of rage.', 'Small');-->
