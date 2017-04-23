@@ -1,8 +1,9 @@
 <?php
+    //ini_set('display_errors', 1); 
     include 'dbh.inc.php';
     include 'pet.inc.php';
-    include 'showpets.inc.php';
-    include 'addpets.php';
+    //include 'showpets.inc.php';
+    //include 'addpets.php';
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +42,7 @@
      
             <input type="text" name="description" placeholder="Pet descprition">
           
-            <button type="submit" name="submit" value="submit">Submit</button>
+            <button type="submit" name="add" value="submit">Submit</button>
         </form>
     </div>-->
         
@@ -69,21 +70,48 @@
             <button type="submit" name="search">Search</button>
         </form>
     </div>
+
+    <br><hr><br>
+    
+    <div>
+        <form method="POST">
+            <label>Delete</label><input type="text" name="deleteid">
+            <button type="submit" name="delete">Delete</button>
+        </form>
+    </div>
     
  
     <?php
     
-        $name = $_POST['name'];
-        $type = $_POST['type']; 
-        $breed = $_POST['breed'];
-        $sex = $_POST['sex'];
-        $description = $_POST['description'];
-        $size = $_POST['size'];
-        $status = $_POST['status'];
+        if(isset($_POST["add"])){
+            
+        
+            $name = $_POST['name'];
+            $type = $_POST['type']; 
+            $breed = $_POST['breed'];
+            $sex = $_POST['sex'];
+            $description = $_POST['description'];
+            $size = $_POST['size'];
+            $status = $_POST['status'];
+        
+            $add = new Pet();    
+            $add->addPet($name, $breed, $type, $sex, $size, $status, $description);
+        }
+        else if(isset($_POST["search"])){
+        // Search 
+        }
+        else if(isset($_POST["delete"])){
+            $deleteID = $_POST['deleteid'];    
+            echo"Deleteting $deleteID";
+            $delete = new Pet();
+            $delete->deletePet($deleteID);
+            
+        }
+        
     
-        $add = new Pet();    
-        $add->addPet($name, $breed, $type, $sex, $size, $status, $description);
-
+        
+        
+        
     ?>
 
  
