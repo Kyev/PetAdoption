@@ -1,4 +1,5 @@
 <?php
+
     class Pet extends Dbh{
         private $pName;
         private $pType;
@@ -8,21 +9,15 @@
         private $pStatus;
         private $pDescription;
          
-        public function getPets($type){
-            $sql = "SELECT * FROM PETS WHERE pType ='$type'";
+        protected function getPets () {
+            $sql = "SELECT * FROM Pets";
             $result = $this->connect()->query($sql);
             $numRows = $result->num_rows;
             if($numRows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $data[] = $row;
                 }
-                foreach ($data as $datas) {
-                echo $datas['pName'];
-                echo $datas['pType'];
-                echo $datas['pSex'];
-                echo $datas['petSize'];
-                }
-                //return $data;
+                return $data;
             }
         }
         
@@ -35,26 +30,54 @@
             $this->pStatus = $status;
             $this->pDescription = $description;
             
-            $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '0', '$this->pDescription')";
+            $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '$this->pStatus', '$this->pDescription')";
             $this->connect()->query($sql);
         }
-    }
+        
+        function deletePet($pID){
+            //$_SESSION['admin'] = TRUE;
+        
+            // Handles the deletion process when user
+            // clicks the delete button on an pet
+            // Will only delete the pet if 
+            // if user has admin privileges 
+            if(isset($pID))
+            {
+                
+                
+                $idToDelete = $pID;
+                //echo " ID to delete is $idToDelete";
+                $petFind  = "SELECT * FROM PETS WHERE pID = $idToDelete";
+                $petInfo = $this->connect()->query($petFind);
+                
+                if(!$pet = $this->connect()->query($petFind))
+                {
+                    die('There was an error running the query');
+                }
+                
+                if ($_SESSION['admin'] == TRUE)
+                {
+                    $delete = "DELETE FROM PETS WHERE 
+                    pID = $idToDelete";
+                    if(!$petremoval = $this->connect()->query($delete))
+                    {
+                        die('There was an error running the query');
+                    }
+                    $petremoval = $this->connect()->query($delete);
+                    echo'<script type="text/javascript">alert("Pet was succesfully deleted");</script>
+                    ';    
+                }
+                else
+                {
+                    echo
+                    "<script type='text/javascript'>alert('PetID $pID was NOT deleted');</script>
+                    ";    
+                }  
+            }
+        }
+}
 
-
+?>
 /*INSERT INTO `PETS` (`pid`, `pName`, `pBreed`, `pType`, `pSex`, `pStatus`, `pDescription`, `pSize`) VALUES (NULL, 'Luke', 'Kylo', 'Dog', 'Male', 'Available', 'Random fits of rage.', 'Small');*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //clientregister in create account sequence diagram
 //reservepet in reservation 'createpetreservation' too in reservation sequence diagram
