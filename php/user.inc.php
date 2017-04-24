@@ -27,7 +27,6 @@ include 'dbh.inc.php';
           
             $sql = "INSERT INTO CUSTOMERS (cUName, cAddress, cPassword, cEmail) VALUES ('$this->cUName', '$this->cAddress', '$this->cPassword', '$this->cEmail')";
             $this->connect()->query($sql);
-            echo'<script type="text/javascript">alert("Account successfully created!");</script>
-                    ';
+            echo'<script type="text/javascript">alert("Account successfully created!");</script>';
         }
     }

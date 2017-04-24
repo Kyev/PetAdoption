@@ -125,13 +125,20 @@ input[type=checkbox].glyphicon{
                             </form>
 
                                 <?php
+                                if (isset($_POST['userName']))
                                 $userName = $_POST['userName'];
+                                if (isset($_POST['address']))
                                 $address = $_POST['address'];
+                                if (isset($_POST['password']))
                                 $password = $_POST['password'];
+                                if (isset($_POST['email']))
                                 $email = $_POST['email'];
-    
+                                
+                                if (isset($_POST['userName']))
+                                {
                                 $addUser = new Customer();
                                 $addUser->registerCustomer($userName, $address, $password, $email);
+                                }
                                 ?>
 
                         </div>                     

@@ -74,6 +74,7 @@ include 'dbh.inc.php';
             
             $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription, pImg) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '$this->pStatus', '$this->pDescription', '$this->pImg')";
             $this->connect()->query($sql);
+            echo'<script type="text/javascript">alert("Pet successfully added!");</script>';
         }
         
         public function getAllPets(){

@@ -105,18 +105,26 @@ input[type=checkbox].glyphicon{
     </div>
             
     <?php
-
+        if (isset($_POST['name']))
         $name = $_POST['name'];
+        if (isset($_POST['type']))
         $type = $_POST['type'];
+        if (isset($_POST['breed']))    
         $breed = $_POST['breed'];
+        if (isset($_POST['sex']))    
         $sex = $_POST['sex'];
+        if (isset($_POST['description']))
         $description = $_POST['description'];
+        if (isset($_POST['size']))
         $size = $_POST['size'];
+        if (isset($_POST['image']))
         $image = $_POST['image'];
-
+            
+        if (isset($_POST['name']))
+        {
         $add = new Pet();
         $add->addPet($name, $breed, $type, $sex, $size, $description, $image);
-
+        }
         /*$type = $_POST['type'];
 
         $search = new Pet();
