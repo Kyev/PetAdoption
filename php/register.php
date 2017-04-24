@@ -1,7 +1,8 @@
 <?php
 //require_once './php/db_connect.php';
 // ini_set('display_errors', '1');
-error_reporting(0);
+//error_reporting(0);
+include 'user.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -128,13 +129,9 @@ input[type=checkbox].glyphicon{
                                 $address = $_POST['address'];
                                 $password = $_POST['password'];
                                 $email = $_POST['email'];
-
-
+    
                                 $addUser = new Customer();
                                 $addUser->registerCustomer($userName, $address, $password, $email);
-
-
-
                                 ?>
 
                         </div>                     
