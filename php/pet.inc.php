@@ -10,7 +10,7 @@ include 'dbh.inc.php';
         private $pStatus;
         private $pDescription;
         private $pImg;
-        private $petid;
+        private $pID;
          
         public function getPets($type){
             $sql = "SELECT * FROM PETS WHERE pType ='$type'";
@@ -52,8 +52,8 @@ include 'dbh.inc.php';
         
         
         public function reservePet($id){
-            $pid = $_POST['animalReserve'];   
-            $sql = "UPDATE PETS SET pStatus = '1' where pID = $pid";
+            $pID = $_POST['animalReserve'];   
+            $sql = "UPDATE PETS SET pStatus = '1' where pID = $pID";
             $petReserve = $this->connect()->query($sql);
             echo '<script type="text/javascript">alert("Pet was succesfully reserved");</script>';
             
@@ -100,7 +100,7 @@ include 'dbh.inc.php';
         <div class="profile-card_about">
           <h2>'.$datas['pSex'].'</h2>
           <p>'.$datas['pDescription'].'</p>';
-                    $this->petid = $datas['pID'];
+                    $this->pID = $datas['pID'];
                     echo '<form method="POST" name="delete"><button type="submit" class="btn btn-default center-block" name="delete" value="'.$datas['pID'].'" style="background-color: #FFFFFF">DELETE</button></form>';
          //closing brackets           
         echo '</div></div></div>';
