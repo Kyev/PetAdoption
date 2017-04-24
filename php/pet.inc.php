@@ -60,6 +60,9 @@ include 'dbh.inc.php';
         }
         
         public function addPet($name, $breed, $type, $sex, $size, $description, $pImg){
+
+        public function addPet($name, $breed, $type, $sex, $size, $description, $image){
+
             $this->pName = $name;
             $this->pBreed = $breed;
             $this->pType = $type;
