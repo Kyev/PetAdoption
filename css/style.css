@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-
+/*
 @media (max-width: 740px) {
   ul li {
     width: 100%;
@@ -18,8 +18,8 @@ body {
     .container ul li {
         text-align: center;
     }
-}
-
+}*/
+/*
 @media (max-width: 500px) {
   ul li {
     width: 100%;
@@ -27,7 +27,7 @@ body {
     ul{
         text-align: center;
     }
-}
+}*/
 /* Header */
 
 .header {
