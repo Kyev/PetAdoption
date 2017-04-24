@@ -48,7 +48,7 @@ include 'dbh.inc.php';
             }
         }
         
-        public function addPet($name, $breed, $type, $sex, $size, $description, $pImg){
+        public function addPet($name, $breed, $type, $sex, $size, $description, $image){
             $this->pName = $name;
             $this->pBreed = $breed;
             $this->pType = $type;
@@ -56,7 +56,7 @@ include 'dbh.inc.php';
             $this->pSize = $size;
             $this->pStatus = 0;
             $this->pDescription = $description;
-            $this->pImg = $pImg;
+            $this->pImg = $image;
             
             $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription, pImg) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '$this->pStatus', '$this->pDescription', '$this->pImg')";
             $this->connect()->query($sql);
