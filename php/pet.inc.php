@@ -1,4 +1,4 @@
--+<?php
+<?php
 include 'dbh.inc.php';
 
     class Pet extends Dbh{
@@ -40,13 +40,23 @@ include 'dbh.inc.php';
                 if($datas['pStatus'] > 0){
                     echo '<input type="button" class="btn btn-default center-block" value="RESERVED" style="background-color: #f44336">';
                 } else{
-                    echo '<input type="button" class="btn btn-default center-block" value="Reserve" style="background-color: #4caf50">';
+                    echo '<form method="POST" name="delete"><button type="submit" class="btn btn-default center-block" name="animalReserve" value="'.$datas['pID'].'" style="background-color: #4caf50">Reserve</button></form>';;
                 }
          //closing brackets           
         echo '</div></div></div>';
                 }
                 echo '</div></div>';
             }
+        }
+        
+        
+        
+        public function reservePet($id){
+            $pid = $_POST['animalReserve'];   
+            $sql = "UPDATE PETS SET pStatus = '1' where pID = $pid";
+            $petReserve = $this->connect()->query($sql);
+            echo '<script type="text/javascript">alert("Pet was succesfully reserved");</script>';
+            
         }
         
         public function addPet($name, $breed, $type, $sex, $size, $description, $pImg){

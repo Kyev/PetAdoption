@@ -7,9 +7,9 @@
         
         protected function connect(){
             $this->servername = "localhost";
-            $this->username = "jfonte1";
-            $this->password = "8gpxBSgeDK";
-            $this->dbname = "jfonte1";
+            $this->username = "root";
+            $this->password = "root";
+            $this->dbname = "dcoelho";
             
             $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
             return $conn;

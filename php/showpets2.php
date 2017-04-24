@@ -1,17 +1,22 @@
 <?php
+//ini_set('display_errors', 1);
 include 'pet.inc.php';
 session_start();
+
 if(isset($_POST['animalSubmit'])){
     $_SESSION['animal'] = $_POST['animalSubmit'];
 }
-else {
-    echo '<meta http-equiv="refresh" content="0; URL="animals.php"';
-}
 
 if(isset($_POST['animalReserve'])){
-    
+            
+            $id = $_POST['animalReserve'];
+            echo $id;
+            $res = new Pet();    
+            $res->reservePet($id);
 }
+
 ?>
+
 <!DOCTYPE html>
 <html>
 
