@@ -1,5 +1,13 @@
 <?php
 include 'pet.inc.php';
+if(isset($_POST["delete"])){
+            $id = $_POST['delete'];
+            
+            $del = new Pet();    
+            $del->deletePet($id);
+        }
+
+
 ?>
 <!DOCTYPE html>
 <html>

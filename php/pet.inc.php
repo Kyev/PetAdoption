@@ -1,4 +1,4 @@
-<?php
+-+<?php
 include 'dbh.inc.php';
 
     class Pet extends Dbh{
@@ -10,6 +10,7 @@ include 'dbh.inc.php';
         private $pStatus;
         private $pDescription;
         private $pImg;
+        private $petid;
          
         public function getPets($type){
             $sql = "SELECT * FROM PETS WHERE pType ='$type'";
@@ -56,7 +57,7 @@ include 'dbh.inc.php';
             $this->pSize = $size;
             $this->pStatus = 0;
             $this->pDescription = $description;
-            $this->pImg = $pImg;
+            $this->pImg = $image;
             
             $sql = "INSERT INTO PETS (pName, pBreed, pType, pSex, pSize, pStatus, pDescription, pImg) VALUES ('$this->pName', '$this->pBreed', '$this->pType', '$this->pSex', '$this->pSize', '$this->pStatus', '$this->pDescription', '$this->pImg')";
             $this->connect()->query($sql);
@@ -79,7 +80,7 @@ include 'dbh.inc.php';
                                   <div class="profile-card_header-container">
                                     <div class="profile-card_header-imgbox">'; //end of opening container
                     //Get Image
-                    echo '<img src="../img/'.$datas['pIMG'].'" alt="'.$datas['pIMG'].'" />';
+                    echo '<img src="../img/'.$datas['pImg'].'" alt="'.$datas['pImg'].'" />';
                 echo '</div>
             <h1>'.$datas['pName'].'<span>'.$datas['pBreed'].'</span></h1>
           </div>
@@ -87,7 +88,8 @@ include 'dbh.inc.php';
         <div class="profile-card_about">
           <h2>'.$datas['pSex'].'</h2>
           <p>'.$datas['pDescription'].'</p>';
-                    echo '<input type="button" class="btn btn-default center-block" value="DELETE" style="background-color: #FFFFFF">';
+                    $this->petid = $datas['pID'];
+                    echo '<form method="POST" name="delete"><button type="submit" class="btn btn-default center-block" name="delete" value="'.$datas['pID'].'" style="background-color: #FFFFFF">DELETE</button></form>';
          //closing brackets           
         echo '</div></div></div>';
                 }
@@ -96,7 +98,7 @@ include 'dbh.inc.php';
         }
         
         function deletePet($pID){
-            //$_SESSION['admin'] = TRUE;
+            
         
             // Handles the deletion process when user
             // clicks the delete button on an pet
@@ -104,8 +106,6 @@ include 'dbh.inc.php';
             // if user has admin privileges 
             if(isset($pID))
             {
-                
-                
                 $idToDelete = $pID;
                 //echo " ID to delete is $idToDelete";
                 $petFind  = "SELECT * FROM PETS WHERE pID = $idToDelete";
@@ -116,8 +116,6 @@ include 'dbh.inc.php';
                     die('There was an error running the query');
                 }
                 
-                if ($_SESSION['admin'] == TRUE)
-                {
                     $delete = "DELETE FROM PETS WHERE 
                     pID = $idToDelete";
                     if(!$petremoval = $this->connect()->query($delete))
@@ -127,13 +125,6 @@ include 'dbh.inc.php';
                     $petremoval = $this->connect()->query($delete);
                     echo'<script type="text/javascript">alert("Pet was succesfully deleted");</script>
                     ';    
-                }
-                else
-                {
-                    echo
-                    "<script type='text/javascript'>alert('PetID $pID was NOT deleted');</script>
-                    ";    
-                }  
             }
         }
 }
