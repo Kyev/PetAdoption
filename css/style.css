@@ -44,20 +44,22 @@ body {
 img {
     position: relative;
     height: 30px;
-    width: 200px;
 }
 
-.header .main {
+.mySlides {
+    display: none;
+    position: fixed;
+    height: 270px;
+    padding-left: 270px;
+    padding-right: 500px;
+}
+
+.navbar-default{
   background-color: #7098DA;
 }
 
-.header li {
-  color: #fff;
-  display: inline-block;
-  font-size: 20px;
-  text-align: left;
-  padding: 20px 30px;
-  margin: 0;
+a {
+    color: white !important;
 }
 /* Jumbotron */
 
@@ -66,7 +68,7 @@ img {
   background-size: cover;
   height: 500px;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 50px;
 }
 
 .jumbotron h1 {
@@ -107,15 +109,12 @@ img {
 .footer {
   color: #fff;
   background-color: #7098DA;
-  padding: 20px;
+  padding: 40px;
+  padding-bottom: 0px;
 }
 
 .copy {
   padding-top: 10px;
-}
-
-.nav li a {
-  color: #fff;
 }
 
 a {
@@ -142,6 +141,24 @@ a {
     box-sizing: border-box;
     border:none;
     border-bottom: 3px solid #30627E; 
+}
+
+.row {
+    margin-top: -5%;
+}
+
+.button3 {
+    background-color: #7098DA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
 input[type="text"]{
