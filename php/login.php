@@ -1,3 +1,31 @@
+<?php 
+
+  if (isset($_POST['submit']))
+  {
+    if (isset($_POST['uid']) && isset($_POST['pwd'])){
+      $user = $_POST['uid'];
+      $pw = $_POST['pw'];
+      if($user === 'admin' && $pw === 'admin'){
+        header("Location:http://www.espn.com"); 
+      }
+      else{
+        header("Location:http://www.google.com");
+        exit; 
+      }
+    }
+    else{
+      echo
+      "
+          <script>
+              function myFunction() {
+              alert('Please enter valid username and password!');
+              }
+          </script>
+      ";    
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -30,10 +58,10 @@
             <h2>Welcome</h2>
         </div>
         <div class="form">
-            <form action="logged_in.html" ><!--method="POST"-->
+            <form method="POST" ><!--method="POST"-->
                 <input type="text" name="uid" placeholder="Username">
                 <input type="password" name="pwd" placeholder="Password">
-                <button type="submit">Login</button>
+                <button type="submit" name="submit">Login</button>
             </form>
         </div>
     </div>
