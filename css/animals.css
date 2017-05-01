@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  /*max-width: 940px;*/
+  max-width: 940px;
   margin: 0 auto;
   padding: 0;
 }
@@ -28,12 +28,6 @@ body {
   margin: 0px;
 }
 
-#logo {
-    position: relative;
-    height: 60px;
-    width: 200px;
-}
-
 .header .main { /* LOGO properties */
     margin-bottom: 0px;
 }
@@ -43,8 +37,13 @@ body {
   display: inline-block;
   font-size: 30px;
   text-align: left;
-    
-  padding: 20px;
+  padding: 10px;
+}
+
+#logo {
+    position: relative;
+    height: 60px;
+    width: 200px;
 }
 
 /* Jumbotron */
