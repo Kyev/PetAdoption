@@ -23,6 +23,7 @@
           </script>
       ";    
     }
+    $_POST = array();
   }
 ?>
 
