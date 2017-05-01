@@ -29,29 +29,20 @@ if(isset($_POST['animalReserve'])){
   <link rel="stylesheet" href="../css/animals.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
-
+    
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+<div class="header">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html"><img src="../img/Pets_R_Us_sml.png" alt="Logo"></a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="animals.php">Animals</a></li>
-          <li><a href="register.php">Register</a></li>
-          <li><a href="../html/login.html">Login</a></li>
+        <ul>
+            <li class="main">
+                <a href="../index.html"><img src="../img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
+            </li>
+            <li><a href="animals.php">Animals</a></li>
+            <li><a href="../php/register.php">Register</a></li>
+            <li><a href="../html/login.html">Login</a></li>
         </ul>
-      </div>
-      <!--/.nav-collapse -->
     </div>
-  </nav>
+</div>
 
 <?php
     $petSearch = new Pet();
@@ -62,13 +53,7 @@ if(isset($_POST['animalReserve'])){
     
 
 <div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <div class="copy">© Pets'R'Us</div>
-      </div>
-    </div>
-  </div>
+    <div class="copy">© Pets'R'Us</div>
 </div>
 </body>
 
