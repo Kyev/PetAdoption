@@ -53,28 +53,7 @@ img {
 }
 
 
-@media screen and (max-width: 26em) {
-  .side_wrapper {
-    min-height: 100vh;
-    background: #ededed;
-      
-  }
-  .about-dev {
-    box-shadow: none;
-  }
-}
 
-@media screen and (min-width: 33em) {
-  .side_wrapper {
-    margin: 2rem auto;
-    
-  }
-  .profile-card_header {
-    padding: 1.5em 4em 1em;
-    border-radius: 8px 8px 0px 0px; 
-      
-  }
-}
 
 .mySlides {
     display: none;
@@ -145,10 +124,6 @@ a {
 
 .copy {
   padding-top: 10px;
-}
-
-a {
-    color:white
 }
 
 .form input{
