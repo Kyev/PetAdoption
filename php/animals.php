@@ -23,7 +23,7 @@
     <div class="container">
         <ul>
             <li class="main">
-                <a href="#"><img src="../img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
+                <a href="../index.html"><img src="../img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
             </li>
             <li><a href="animals.php">Animals</a></li>
             <li><a href="../php/register.php">Register</a></li>
