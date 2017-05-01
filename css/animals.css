@@ -94,7 +94,7 @@ body {
   min-height: 100vh;
  /* background: -webkit-linear-gradient(transparent, rgba( 255, 255, 179, .3)), -webkit-linear-gradient(350deg, rgba(250, 214, 195, .8) 30%, #B0EAE8 120%);
   background: linear-gradient(transparent, rgba(179, 255, 153, .3)), linear-gradient(100deg, rgba(255, 255, 179, .8) 30%, #B0EAE8 120%);*/
-    background: #e6ffff;
+    background: whitesmoke;
 }
 
 .sidebar_wrapper {
