@@ -1,12 +1,13 @@
 <!-- Include PHPs -->
 <?php
-   include 'pet.inc.php';
+    include 'pet.inc.php';
+    session_start();
+    $_SESSION['animal']="";
 ?>
 <!-- END INCLUDE PHP -->
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>Pets'R'Us</title>
@@ -24,8 +25,7 @@
             <li class="main">
                 <a href="#"><img src="../img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
             </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="animals.html">Animals</a></li>
+            <li><a href="animals.php">Animals</a></li>
             <li><a href="../php/register.php">Register</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
@@ -41,82 +41,54 @@
         </div>
 
 <?php
-        session_start();
-        $_SESSION['animal']="";
+       
 ?>
         
         
         <div class="col-sm-4">
-        <!-- CAT SECTION -->
-        <?php
-            
-            echo <<<END
-<div class="side_wrapper">
-<header class="profile-card_header">
-<img src="../img/cat.png" alt="Cats" />
-</header>
-<div class="profile-card_about">
-<form action="../php/showpets2.php" method="POST">
-<button type="submit" class="btn btn-success center-block" value="Cat" name="animalSubmit">VIEW CATS</button>
-</form>
-</div>
-</div>
-END;
-        ?>
+
+        <!-- CAT SECTION -->   
+
+            <div class="side_wrapper">
+                <header class="profile-card_header">
+                    <img src="../img/cat.png" alt="Cats" />
+                </header>
+                <div class="profile-card_about">
+                    <form action="../php/showpets2.php" method="POST">
+                        <button type="submit" class="btn btn-success center-block" value="Cat" name="animalSubmit">VIEW CATS</button>
+                    </form>
+                </div>
+            </div>
+
         <!-- END CAT SECTION -->
-            
+
         <!-- DOG SECTION -->
-            <?php
-            
-            echo <<<END
-<div class="side_wrapper">
-<header class="profile-card_header">
-<img src="../img/dog.png" alt="Dogs" />
-</header>
-<div class="profile-card_about">
-<form action="../php/showpets2.php" method="POST">
-<button type="submit" class="btn btn-success center-block" value="Dog" name="animalSubmit">VIEW DOGS</button>
-</form>
-</div>
-</div>
-END;
-        ?>
-            <!--<div class="side_wrapper">
+
+            <div class="side_wrapper">
                 <header class="profile-card_header">
                     <img src="../img/dog.png" alt="Dogs" />
                 </header>
                 <div class="profile-card_about">
-                    <input type="button" class="btn btn-success center-block" value="VIEW DOGS">
+                    <form action="../php/showpets2.php" method="POST">
+                        <button type="submit" class="btn btn-success center-block" value="Dog" name="animalSubmit">VIEW DOGS</button>
+                    </form>
                 </div>
-            </div>-->
-        <!-- END DOG SECTION -->
-            
-        </div>
-
-        <div class="col-sm-4">
-            <div class="side_wrapper">
-
             </div>
+
+        <!-- END DOG SECTION -->
+
         </div>
 
+       
 
     </div>
 </div>
-
-
-
 
 <div class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-2">
                 <div class="copy">© Pets'R'Us</div>
-            </div>
-            <div class="col-md-10">
-                <ul class="nav nav-pills pull-right">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
             </div>
         </div>
     </div>
