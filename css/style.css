@@ -11,15 +11,20 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-/*
-@media (max-width: 740px) {
+
+@media (max-width: 500px) {
   ul li {
     width: 100%;
   }
     .container ul li {
         text-align: center;
     }
-}*/
+}
+
+.header {
+  background-color: #7098DA;
+}
+
 /*
 @media (max-width: 500px) {
   ul li {
@@ -39,7 +44,21 @@ body {
   list-style: none;
   text-align: left;
   margin: 0;
-  padding: 0;
+}
+
+.header li {
+  color: #fff;
+  display: inline-block;
+  font-size: 30px;
+  text-align: left;
+    
+  padding: 20px;
+}
+
+#logo {
+    position: relative;
+    height: 60px;
+    width: 200px;
 }
 
 img {

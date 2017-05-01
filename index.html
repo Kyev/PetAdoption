@@ -12,28 +12,19 @@
 </head>
 
 <body>
-
-  <nav class="navbar navbar-default navbar-fixed-top">
+<div class="header">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img src="img/Pets_R_Us_sml.png" alt="Logo"></a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="php/animals.php">Animals</a></li>
-          <li><a href="php/register.php">Register</a></li>
-          <li><a href="html/login.html">Login</a></li>
+        <ul>
+            <li class="main">
+                <a href="#"><img src="img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
+            </li>
+            <li><a href="animals.php">Animals</a></li>
+            <li><a href="../php/register.php">Register</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
-      </div>
-      <!--/.nav-collapse -->
     </div>
-  </nav>
+</div>
+ 
 
   <div class="jumbotron">
     <div class="container">
@@ -44,11 +35,28 @@
           </h3>
           <h2 class="brand-name">PETS "R" US</h2>
           <hr class="tagline-divider">
-          <h2 style="margin-top: -10px">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4" style="margin-top: 100px; padding-right:20px; border-right: 1px solid #ccc;">
+                  <h2>Search</h2>
+                  <p>Find a pet based on location, type, breed, age, and gender. We look through hundreds of shelters, agencies, and rescue sites.</p> 
+                </div>
+                <div class="col-md-4" style="margin-top: 100px; padding-right:20px; border-right: 1px solid #ccc;">
+                  <h2>Learn</h2>
+                  <p>Read articles on feeding, training, grooming, and more. Our resources ensure that you are fully prepared as a new pet owner.</p>
+                </div>
+                <div class="col-md-4" style="margin-top: 100px;">
+                  <h2>Help</h2>
+                  <p>Get involved and help pets in need. You can make a difference by become a volunteer or helping us spread the message through social media.</p>
+                </div>
+              </div>
+            </div>
+             <h2 style="margin-top: -10px">
             <small>Find your companion right now!
             </small>
           </h2>
           <a href="php/animals.php" class="button button3">PETS</a>
+            
           <div class="col-lg-12 text-center">
             <div class="w3-content w3-section">
               <img class="mySlides" src="https://static.pexels.com/photos/7720/night-animal-dog-pet.jpg" style="width:100%">
@@ -77,32 +85,9 @@
       </div>
     </div>
   </div>
-<!--
-  <div class="supporting">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Search</h2>
-          <p>Find a pet based on location, type, breed, age, and gender. We look through hundreds of shelters, agencies, and rescue sites.</p>
-          <a href="#" class="btn">Go</a>
-        </div>
-        <div class="col-md-4">
-          <h2>Learn</h2>
-          <p>Read articles on feeding, training, grooming, and more. Our resources ensure that you are fully prepared as a new pet owner.</p>
-          <a href="#" class="btn">Go</a>
-        </div>
-        <div class="col-md-4">
-          <h2>Help</h2>
-          <p>Get involved to help pets in need. You can make a difference through volunteering, social media, and donations.</p>
-          <a href="#" class="btn">Go</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  -->
-
+    
   <div class="footer">
-          <div class="copy">© Pets'R'Us</div>
+      <div class="copy">© Pets'R'Us</div>
   </div>
 </body>
 </html>
