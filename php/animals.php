@@ -27,7 +27,7 @@
             </li>
             <li><a href="animals.php">Animals</a></li>
             <li><a href="../php/register.php">Register</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="../html/login.html">Login</a></li>
         </ul>
     </div>
 </div>
