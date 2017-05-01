@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Pets'R'Us</title>
+
+  <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="header">
+    <div class="container">
+        <ul>
+            <li class="main">
+                <a href="../index.html"><img src="../img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
+            </li>
+            <li><a href="../php/animals.php">Animals</a></li>
+            <li><a href="../php/register.php">Register</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
+</div>
+
+  <div class="jumbotron">
+    <div class="container">
+        <div class="headercontainer">
+            <h2>Welcome</h2>
+        </div>
+        <div class="form">
+            <form action="logged_in.html" ><!--method="POST"-->
+                <input type="text" name="uid" placeholder="Username">
+                <input type="password" name="pwd" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="copy">© Pets'R'Us</div>
+  </div>
+    
+</body>
+</html>
