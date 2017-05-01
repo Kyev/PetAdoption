@@ -342,6 +342,9 @@ body {
   color: #fff;
   background-color: #7098DA;
   padding: 20px;
+  position: absolute;
+  bottom : 0px;
+  width: 100%;
 }
 
 .copy {
