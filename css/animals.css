@@ -16,6 +16,7 @@ body {
     width: 100%;
   }
 }
+
 /* Header */
 
 .header {
@@ -35,7 +36,7 @@ body {
 .header li {
   color: #fff;
   display: inline-block;
-  font-size: 30px;
+  font-size: 24px;
   text-align: left;
   padding: 10px;
 }
@@ -350,12 +351,8 @@ body {
   padding-top: 10px;
 }
 
-.nav li a {
-  color: #fff;
-}
-
 a {
-    color:white
+    color:white !important;
 }
 
 /*Search box */

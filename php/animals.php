@@ -40,10 +40,6 @@
             </div>
         </div>
 
-<?php
-       
-?>
-        
         
         <div class="col-sm-4">
 
@@ -85,14 +81,8 @@
 </div>
 
 <div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="copy">© Pets'R'Us</div>
-            </div>
-        </div>
-    </div>
+    <div class="copy">© Pets'R'Us</div>
 </div>
+    
 </body>
-
 </html>
