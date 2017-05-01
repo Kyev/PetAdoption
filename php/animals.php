@@ -19,18 +19,27 @@
 </head>
 
 <body>
-<div class="header">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <ul>
-            <li class="main">
-                <a href="#"><img src="../img/Pets_R_Us_sml.png" alt="Logo" id="logo"></a>
-            </li>
-            <li><a href="animals.php">Animals</a></li>
-            <li><a href="../php/register.php">Register</a></li>
-            <li><a href="login.html">Login</a></li>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../img/Pets_R_Us_sml.png" alt="Logo"></a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="animals.php">Animals</a></li>
+          <li><a href="register.php">Register</a></li>
+          <li><a href="../html/login.html">Login</a></li>
         </ul>
+      </div>
+      <!--/.nav-collapse -->
     </div>
-</div>
+  </nav>
 <!--
 < <div class="jumbotron">-->
 <div class="container">

@@ -56,7 +56,7 @@ input[type=checkbox].glyphicon{
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html"><img src="img/Pets_R_Us_sml.png" alt="Logo"></a>
+          <a class="navbar-brand" href="../index.html"><img src="../img/Pets_R_Us_sml.png" alt="Logo"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
