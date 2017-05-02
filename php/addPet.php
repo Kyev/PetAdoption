@@ -73,16 +73,14 @@ input[type=checkbox].glyphicon{
     <div>
         <form method="POST">
             <input type="text" name="name" placeholder="Pet name">
-
+            <input type="text" name="breed" placeholder="Breed/Type">
+            <input type="text" name="description" placeholder="Pet descprition">
+            <input type="text" name="image" placeholder="Pet image">
             <select name="type">
                 <option value="Dog">Dog</option>
                 <option value="Cat">Cat</option>
             </select>
-            <select name="breed">
-                <option>Breed</option>
-                <option value="Pitbull">Pitbull</option>
-                <option value="Cavapoo">Cavapoo</option>
-            </select>
+            
             <select name="sex">
                 <option value="Male">Male</option>
                 <option value="Female ">Female</option>
@@ -97,10 +95,9 @@ input[type=checkbox].glyphicon{
                 <option value="Reserved">Reserved</option>
             </select>
 
-            <input type="text" name="description" placeholder="Pet descprition">
-            <input type="text" name="image" placeholder="Pet image">
 
-            <button type="submit" name="submit" value="submit">Submit</button>
+
+            <p><button type="submit" name="submit" value="submit">Submit</button></p>
         </form>
     </div>
             
@@ -150,10 +147,6 @@ input[type=checkbox].glyphicon{
           <div class="copy">© Pets'R'Us</div>
         </div>
         <div class="col-md-10">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
         </div>
       </div>
     </div>
