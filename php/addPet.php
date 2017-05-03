@@ -52,7 +52,7 @@ input[type=checkbox].glyphicon{
       <ul>
         <li class="main"><a href="../index.html"><img src="../img/Pets_R_Us_sml.png" alt="Logo"></a></li>
         <li><a href="../html/about.html">About</a></li>
-        <li><a href="../html/animals.html">Animals</a></li>
+        <li><a href="../php/animals.php">Animals</a></li>
         <li><a href="../php/register.php">Register</a></li>
           <li><a href="../html/login.html">Login</a></li>
       </ul>
