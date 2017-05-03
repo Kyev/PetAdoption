@@ -6,10 +6,11 @@
       $user = $_POST['uid'];
       $pw = $_POST['pw'];
       if($user === 'admin' && $pw === 'admin'){
-        header("Location:../html/admin_login.html"); 
+        header("Location:http://lamp.cse.fau.edu/~abutt2015/PetAdoption/html/admin_login.html");
+        exit;
       }
       else{
-        header("Location:../php/animals.php");
+        header("Location:http://lamp.cse.fau.edu/~abutt2015/PetAdoption/php/animals.php");
         exit; 
       }
     }
