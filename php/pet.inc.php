@@ -49,6 +49,10 @@ include 'dbh.inc.php';
             }
         }
         
+        public function unreservePets(){
+         $sql = "UPDATE PETS SET pStatus = '0';  
+         $petUnReserve = $this->connect()->query($sql);
+        }
         
         
         public function reservePet($id){
