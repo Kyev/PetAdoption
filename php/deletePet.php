@@ -46,19 +46,7 @@ if(isset($_POST["delete"])){
 
 
 <div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <div class="copy">© Pets'R'Us</div>
-      </div>
-      <div class="col-md-10">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+    <div class="copy">© Pets'R'Us</div>
 </div>
 </body>
 
