@@ -94,12 +94,12 @@ input[type=checkbox].glyphicon{
                                     </div>
 
                             <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
                                         <input id="signup-passwordconfirm" type="text" class="form-control" name="address" placeholder="Address">
                             </div>
 
                             <div style="margin-bottom: 25px" class="input-group">
-                                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                                                                     <input id="signup-password" type="text" class="form-control" name="email" placeholder="Email">
                                                                 </div>
 
