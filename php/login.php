@@ -4,7 +4,7 @@
   {
     if (isset($_POST['uid']) && isset($_POST['pwd'])){
       $user = $_POST['uid'];
-      $pw = $_POST['pw'];
+      $pw = $_POST['pwd'];
       if($user == 'admin' && $pw == 'admin'){
         header("Location:http://lamp.cse.fau.edu/~abutt2015/PetAdoption/html/admin_login.html");
         exit;
