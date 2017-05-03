@@ -6,10 +6,10 @@
       $user = $_POST['uid'];
       $pw = $_POST['pw'];
       if($user === 'admin' && $pw === 'admin'){
-        header("Location:http://www.espn.com"); 
+        header("Location:../html/admin_login.html"); 
       }
       else{
-        header("Location:http://www.google.com");
+        header("Location:../php/animals.php");
         exit; 
       }
     }
